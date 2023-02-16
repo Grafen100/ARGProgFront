@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="container">
+    <div class="logo col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-8 col-xxl-8">
+      <a
+        href="https://www.argentina.gob.ar/latiendo/queres-capacitarte-y-estudiar"
+      >
+        <img
+          src="../../../assets/media/logoArgProg2.png"
+          id="logoAP"
+          alt="logo ARGProg"
+        />
+        <img
+          src="../../../assets/media/logo@Mo.png"
+          id="logoAMo"
+          alt="logo Proj @M0"
+        />
+      </a>
+    </div>
+
+    <div
+      class="redes logo col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2 col-xxl-2"
+    >
+      <a href="https://ar.linkedin.com"
+        ><img
+          src="../../../assets/media/linkedin.png"
+          id="linkedin"
+          alt="logo linkedin"
+      /></a>
+
+      <a href="https://github.com"
+        ><img
+          src="../../../assets/media/logoGithub.png"
+          id="github"
+          alt="logo github"
+      /></a>
+      <a href="https://wa.me/{{ pers.telefono }}"
+        ><img
+          src="../../../assets/media/W.png"
+          id="whatsapp"
+          alt="logo whatsapp"
+      /></a>
+    </div>
+
+    <div
+      class="Access col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2 col-xxl-2"
+    >
+      <button
+        type="button"
+        class="btn btn-outline-light"
+        (click)="login()"
+        *ngIf="!isLogged"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1.75em"
+          height="1.75em"
+          fill="currentColor"
+          class="bi bi-terminal-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146z"
+          />
+        </svg>
+        INICIAR SESION
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-light"
+        (click)="onLogOut()"
+        *ngIf="isLogged"
+      >
+        FINALIZAR SESION
+      </button>
+    </div>
+  </div>
+</div>

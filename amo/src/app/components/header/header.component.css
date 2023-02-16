@@ -1,0 +1,77 @@
+.row {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 102%;
+  height: 90px;
+  z-index: 9999;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.1 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  font-family: finlandica;
+  font-size: 1.4em;
+}
+
+.container {
+  background-color: black;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  margin-left: 15px;
+}
+
+#logoAP {
+  width: 150px;
+  margin-left: 10px;
+}
+#logoAMo{
+  width: 130px;
+  margin-left: 10px;
+  align-items: flex-start;
+  vertical-align: bottom;
+  margin-bottom: 1px;
+  height: 70px;
+}
+
+img {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.Access{
+  margin-left: 20px;
+}
+
+.btn {
+  border-width: medium;
+  margin-right: 5px;
+}
+
+/*--- Para la vista de celular ---*/
+@media (max-width: 770px) {
+  .container {
+    flex-direction: column;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    padding-bottom: 1em;
+  }
+  .redes {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+  }
+  
+  
+  .redes img {
+    margin: 0.2em;
+  }
+}

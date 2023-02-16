@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background: -prefix-linear-gradient(
+    top,
+    rgb(241, 142, 21) 33,
+    rgb(195, 49, 236) 33,
+    rgb(241, 142, 21) 113
+  );
+  background: linear-gradient(
+    to right,
+    rgb(241, 142, 21) 33%,
+    rgb(195, 49, 236) 33%,
+    rgb(241, 142, 21) 113%
+  );
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container-fluid{
+  background: -prefix-linear-gradient(
+    top,
+    rgb(241, 142, 21) 33,
+    rgb(195, 49, 236) 33,
+    rgb(241, 142, 21) 113
+  );
+  background: linear-gradient(
+    to right,
+    rgb(241, 142, 21) 33%,
+    rgb(195, 49, 236) 33%,
+    rgb(241, 142, 21) 113%
+  );
+}
+
+.row{
+  padding: 20px;
+  width: 101%;
+  font-family: finlandica;
+  font-size: 1.6em;
+  gap: 5px;
+}
+
+
+h1, h3{
+  font-family: finlandica;
+  display: inline;
+}
+
+p{
+  height: 2em;
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+
+.contiene-table {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap:35px;
+}
+
+.btn .btn-light, .btn .btn-outline-danger{
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/*---------------Vista dispositivos Grandes--------*/
+
+@media screen and (min-width: 679px) {
+  .row {
+    gap: 0px;
+  }
+}

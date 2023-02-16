@@ -1,0 +1,145 @@
+.row {
+  padding: 10px;
+  height: 770px;
+  margin-top: 0px;
+  width: 103%;
+}
+
+#about1 {
+  font-family: finlandica;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+
+
+.container-fluid {
+  background: -prefix-linear-gradient(
+    top,
+    rgb(241, 142, 21) 33,
+    rgb(195, 49, 236) 33,
+    rgb(241, 142, 21) 113
+  );
+  background: linear-gradient(
+    to right,
+    rgb(241, 142, 21) 33%,
+    rgb(195, 49, 236) 33%,
+    rgb(241, 142, 21) 113%
+  );
+}
+
+div {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  gap: 15px;
+  margin-right: 5px;
+}
+.img-fluid {
+  height: 200px;
+  width: min-content;
+}
+
+p {
+  min-height: 2em;
+}
+
+.h1{
+  font-size: 1.7em;
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.titulo {
+  text-align: start;
+  color: whitesmoke;
+}
+
+.titulo .titulo {
+  font-size: 60px;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+.titulo .adjetivo {
+  font-weight: normal;
+  color: red;
+  font-style: normal;
+  font-family: MrRobot;
+}
+
+@font-face {
+  font-family: 'MrRobot';
+  src: url('src/assets/fonts/MR ROBOT.ttf')format('truetype');
+  font-style: normal;}
+
+
+.titulo {
+  margin-bottom: 40px;
+  line-height: 36px;
+}
+
+.name{
+  height: 290px;
+}
+
+/*   ESTILO DE LA FOTO DE PERFIL  */
+
+@media (max-width: 770px) {
+  #fotodeperfil {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 576px) {
+  #fotodeperfil {
+    position: absolute;
+    width: 15%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 3%;
+    top: 550px;
+  }
+  #about2 {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 0%;
+  }
+}
+@media (max-width: 768px) {
+  #fotodeperfil {
+    position: absolute;
+    width: 35%;
+    border-radius: 100%;
+    box-shadow: 3px 3px 3px grey;
+    left: 33%;
+    top: 590px;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 auto;
+  }
+}
+
+/*etiqueta nombre*/
+#nombre {
+  font-weight: bold;
+  margin-top: 30%;
+}
+
+
+
+

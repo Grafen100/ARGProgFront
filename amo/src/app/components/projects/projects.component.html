@@ -1,0 +1,81 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <p></p>
+      <hr color="black" heigth="1px" />
+      <hr color="black" heigth="1px" />
+      <p></p>
+      <h1>Proyectos realizados</h1>
+    </div>
+    <div class="row">
+      <p></p>
+      <div class="NwPro col-lg-2">
+        <button class="btn btn-dark" routerLink="/newproj" *ngIf="isLogged">
+          Nueva Proyecto
+        </button>
+        <p></p>
+      </div>
+      <div class="row">
+        <div class="container contiene-table col-10">
+          <div class="row" *ngFor="let Project of proj">
+            <div
+              class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3"
+            >
+              <h3>{{ Project?.nombreProj }}</h3>
+            </div>
+            <div
+              class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3"
+            >
+              <a href="" target="_blank" rel="noreferrer noopener">
+                <img
+                  [src]=" Project?.imagenProj"
+                  alt="imagenproyecto"
+                  class="logosProyectos hoverProyectos img-fluid"
+                />
+              </a>
+            </div>
+            <div
+              class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-2 col-xxl-2"
+            >
+              {{ Project?.descProj }}
+            </div>
+            <div
+              *ngIf="isLogged"
+              class="col-xs-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 col-xxl-2"
+            >
+              <button
+                type="button"
+                class="btn btn-light"
+                routerLink="/editproj/{{ Project?.id }}"
+              >
+                <i class="bi bi-pencil-fill">EDITAR</i>
+              </button>
+            </div>
+            <div
+              *ngIf="isLogged"
+              class="col-xs-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 col-xxl-2"
+            >
+              <button
+                type="button"
+                class="btn btn-outline-light"
+                (click)="delete(Project?.id)"
+              >
+                <i class="bi bi-trash-fill">BORRAR</i>
+              </button>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row4">
+        <div class="arrow col lg 1">
+          <div class="social-icons">
+            <a class="social-icon1" href="#" aria-label="Volver al Inicio">
+              <i class="bi bi-arrow-bar-up"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="NwAbo col-lg-2">
+<!--
+      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      ++            FUTURO BOTON POR SI QUEREMOS AGREGAR PERSONAS                   ++
+      ++  (crear new-about.component formato html/css/ts y citar en el app-routing) ++
+      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        <button class="btn btn-dark" routerLink="/newpers" *ngIf="isLogged">
+          Nueva Persona
+        </button>  -->
+
+      </div>
+      <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-xl-3 col-xxl-3">
+        <img
+          src={{person?.imagen}}
+          class="img-fluid"
+          id="fotodeperfil"
+          alt="foto de perfil"
+        />
+      </div>
+      <div class="name col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
+        <h1>
+          <p id="nombre"> {{ person?.nombre }} {{ person?.apellido }} </p>
+        </h1>
+        <p>Full Stack Developer Jr</p>
+
+        <h2 class="titulo">
+          <span class="typed"></span>
+        </h2>
+
+        <div class="titulo" id="cadenas-texto">
+          <p >Me destaco <br />por ser <i class="adjetivo"> innovador</i></p>
+          <p >Me destaco <br />por ser <i class="adjetivo"> creativo</i></p>
+          <p >Me destaco <br />por ser <i class="adjetivo"> eficiente</i></p>
+          <p >Me destaco <br />por ser <i class="adjetivo"> colaborativo</i></p>
+          <p >Me destaco <br />por ser <i class="adjetivo"> proactivo</i></p>
+        </div>
+        <br><br><br> <br><br><br><br>
+      </div>
+      <div id="about1" class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-10 col-xxl-10">
+        <span id="about2" >
+          <h2> <b> Acerca de mí</b> </h2>
+          {{person?.descPers}}
+        </span>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 col-xxl-2">
+      <button
+        type="button"
+        class="btn btn-light"
+        routerLink="/editpers/1"
+        *ngIf="isLogged"
+      >
+        <i class="bi bi-pencil-fill">EDITAR</i>
+      </button>
+    </div>
+
+<!--
+      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      ++            FUTURO BOTON POR SI QUEREMOS BORRAR  PERSONAS                   ++
+      ++                    ( y citar en el app-routing)                            ++
+      ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+    <div
+
+      class="col-xs-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 col-xxl-2"
+    >
+      <button
+        type="button"
+        class="btn btn-outline-danger"
+        (click)="delete(Project.id)"
+      >
+        <i class="bi bi-trash-fill">BORRAR</i>
+      </button>
+
+    </div> -->
+  </div>
+</div>
+

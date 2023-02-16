@@ -1,0 +1,113 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="container d-inline-flex">
+        <h1 class="col-sm-6 p-2">Habilidades</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="d-flex p-2 flex-wrap">
+          <div
+            class="social-icons p-2"
+            *ngIf="editService.valorIcon"
+            (click)="onNew()"
+          >
+            <button type="button" class="btn btn-dark" href="#habil">
+              Nueva Habilidad
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="container contiene-progress col-10">
+      <app-progress
+        *ngFor="let dato of barras"
+        [datos]="dato"
+        (onDeleteProgress)="deleteSkill(dato)"
+        (onSave)="onEdit($event)"
+      ></app-progress>
+    </div>
+    <!--<div class="separador"></div>-->
+
+    <!-- Modal -->
+    <div
+      class="fixed-top modal-skills"
+      *ngIf="toggleModal"
+      enctype="multipart/form-data"
+    >
+      <div
+        class="position-relative col-sm-6 fade-in top-50 start-50 translate-middle border border-1 border-primary bg-white redondea"
+      >
+        <div>
+          <div class="modal-header">
+            <h3 class="modal-title" id="staticBackdropLabel">
+              Agregar habilidad
+            </h3>
+            <button
+              type="button"
+              class="btn-close"
+              aria-label="Close"
+              (click)="onNew()"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <label for="porcentaje"
+                ><h5>Elija el porcentaje</h5>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="porcentaje"
+                  id="porcentaje"
+                  [(ngModel)]="nuevo.porcentaje"
+                />
+                <input
+                  class="range-bar"
+                  type="range"
+                  id="rango"
+                  min="0"
+                  max="100"
+                  [(ngModel)]="nuevo.porcentaje"
+                />
+              </label>
+            </div>
+            <label for="dirección"
+              ><h5>Escriba la dirección de la imagen</h5>
+            </label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="http:/img/imagen.png"
+              [(ngModel)]="nuevo.imagen"
+            />
+            <label for="color">
+              <h5>Elija el color</h5>
+              <input
+                class="form-control"
+                type="color"
+                name="color"
+                id="color"
+                [(ngModel)]="nuevo.color"
+              />
+            </label>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="onNew()">
+              Cerrar
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="onAdd(nuevo)"
+            >
+              Aceptar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

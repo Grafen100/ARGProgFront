@@ -1,0 +1,20 @@
+.div{
+    height:550px;
+    }
+    
+    img{
+        width: 101%;
+        height: 500px;
+        display: flex;
+    }
+    
+    /*-------------Ancho para Dispositivos Chicos-----*/
+    
+    @media screen and (max-width: 770px) {
+    
+        img{
+            width: 101%;
+            height: 700px;
+            display: flex;
+        }
+    }

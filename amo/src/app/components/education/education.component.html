@@ -1,0 +1,74 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <hr color="black" height="1px" />
+      <hr color="black" height="1px" />
+      <p></p>
+      <h1>Educación</h1>
+    </div>
+    <div class="row">
+      <div class="NwEdu col-lg-3">
+        <button
+          type="button"
+          class="btn btn-dark"
+          routerLink="/neweducat"
+          *ngIf="isLogged"
+        >
+          Nueva Educación
+        </button>
+      </div>
+    </div>
+    <div class="container contiene-table col-10">
+      <div class="row" *ngFor="let Education of educ">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3">
+          <h3>{{ Education.nombreEduc }}</h3>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3">
+          {{ Education.fechaInicio.split("-")[2] }}-{{
+            Education.fechaInicio.split("-")[1]
+          }}-{{ Education.fechaInicio.split("-")[0] }}
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3">
+          {{ Education.fechaFinal.split("-")[2] }}-{{
+            Education.fechaFinal.split("-")[1]
+          }}-{{ Education.fechaFinal.split("-")[0] }}
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-3 col-xxl-3">
+          {{ Education.descEduc }}
+        </div>
+        <div
+          *ngIf="isLogged"
+          class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6"
+        >
+        <p></p>
+          <button
+            class="btn btn-light"
+            type="button"
+            d-flex
+            ml-auto
+            routerLink="/editeducat/{{ Education.id }}"
+          >
+            <i class="bi bi-pencil-fill">EDITAR</i>
+          </button>
+        </div>
+        <div
+          *ngIf="isLogged"
+          class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6"
+        >
+        <p></p>
+          <button
+            class="btn btn-outline-light"
+            type="button"
+            (click)="delete(Education.id)"
+          >
+            <i class="bi bi-trash-fill">BORRAR</i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <hr color="black" height="1px" />
+      <hr color="black" heigth="1px" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="container" *ngIf="proj">
+  <div class="row">
+    <div class="header-form">
+      <h2>Proyectos realizados</h2>
+    </div>
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <br />
+          <label for="nombreProj"><b>Nombre del Proyecto</b></label>
+          <br />
+          <input
+            type="text"
+            class="form-control"
+            id="nombreProj"
+            name="nombreProj"
+            minlength="3"
+            maxlength="255"
+            [(ngModel)]="proj.nombreProj"
+            required="required"
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="descProj"
+            ><b>Descripción del proyecto</b>
+          </label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="descProj"
+              name="descProj"
+              minlength="3"
+              maxlength="255"
+              [(ngModel)]="proj.descProj"
+              required="required"
+            ></textarea>
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="imagenProj"><b>Imagen del proyecto</b></label>
+          <input
+            type="text"
+            class="form-control"
+            id="imagenProj"
+            name="imagenProj"
+            minlength="3"
+            maxlength="255"
+            alt="imagenproyecto"
+            [(ngModel)]="proj.imagenProj"
+            required="required"
+          />
+        </div>
+        <br />
+        <br />
+        <br />
+        <button class="btn btn-primary" [disabled]="f.invalid" type="submit">
+          Actualizar
+        </button>
+        <br /><br />
+      </form>
+    </div>
+  </div>
+</div>

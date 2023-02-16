@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="row">
+    <div class="header-form">
+      <h2>Proyectos realizados</h2>
+    </div>
+    <div>
+      <div *ngIf="formProj.invalid && !submitted" [ngClass]="'error'">
+        <b><u> Formulario NO VALIDO</u></b>
+      </div>
+      <br />
+      <form
+        [formGroup]="formProj"
+        (ngSubmit)="onCreate()"
+        id="form-proj"
+        novalidate
+        #f="ngForm"
+        class="was-validated"
+      >
+        <div class="form-group">
+          <label for="nombreProj"
+            ><b>Nombre del Proyecto </b>
+            <br />
+          </label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombreProj"
+              formControlName="nombreProj"
+              name="nombreProj"
+              minlength="3"
+              maxlength="255"
+              placeholder="Nombre del proyecto..."
+              [(ngModel)]="nombreProj"
+              required
+            />
+            <span class="validity"></span>
+
+          <div *ngIf="formProj.get('nombreProj').invalid" [ngClass]="'error'">
+            <div *ngIf="'nombreProj.errors.required'" class="error-msg">
+              El campo es requerido, 3 caracteres como mínimo.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="descProj">
+            <b> Descripción del Proyecto </b>
+          </label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="descProj"
+            formControlName="descProj"
+            name="descProj"
+            minlength="10"
+            maxlength="255"
+            placeholder="Descripción de los proyectos realizados..."
+            [(ngModel)]="descProj"
+            required
+          ></textarea>
+          <div *ngIf="formProj.get('descProj').invalid" [ngClass]="'error'">
+            <div *ngIf="'descProj.errors.required'" class="error-msg">
+              El campo es requerido es de 10 caracteres como mínimo.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="imagenProj"><b>Imagen del Proyecto</b></label>
+          <input
+            type="text"
+            class="form-control"
+            id="imagenProj"
+            name="imagenProj"
+            formControlName="imagenProj"
+            minlength="1"
+            maxlength="255"
+            placeholder="http://www.direccionURL.com/file.png..."
+            [(ngModel)]="imagenProj"
+            required="required"
+          />
+          <div *ngIf="formProj.get('imagenProj').invalid" [ngClass]="'error'">
+            <div *ngIf="'imagenProj.errors.required'" class="error-msg">
+              El campo es requerido es de 1 caracteres como mínimo.
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <button class="btn btn-primary" [disabled]="f.invalid" type="submit">
+          Agregar proyecto
+        </button>
+        <br />
+        <br />
+      </form>
+      <div *ngIf="submitted" [ngClass]="'success'">
+        <b>Formulario enviadose...</b>
+      </div>
+    </div>
+  </div>
+</div>

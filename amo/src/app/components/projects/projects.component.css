@@ -1,0 +1,93 @@
+.container-fluid{
+  background: -prefix-linear-gradient(
+    top,
+    rgb(241, 142, 21) 33,
+    rgb(195, 49, 236) 33,
+    rgb(241, 142, 21) 113
+  );
+  background: linear-gradient(
+    to right,
+    rgb(241, 142, 21) 33%,
+    rgb(195, 49, 236) 33%,
+    rgb(241, 142, 21) 113%
+  );
+    gap: 15px;
+    font-family: finlandica;
+    font-size: 1.2em;
+  }
+ 
+.row{
+  margin: 0px;
+  width: 101%;
+  gap:5px;
+}
+
+.row4{
+  height: 100px;
+  font-family: finlandica;
+  font-size: 1.0em;
+  gap: 5px;
+  margin-bottom: 2em;
+}
+
+
+.div{
+  padding: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.img-proyecto{
+    box-shadow: 10px 10px 30px #000000;
+    box-shadow: ejeX ejeY difumasion color;
+}
+.logosProyectos{
+    width: 16em;
+    height: 12em;
+    object-fit: contain;
+    object-position: 0px 20px;
+  }
+
+  .social-icons {
+    font-size: 5em;
+    float: right;
+    margin-bottom: 0px;
+    margin-right: 90px;;
+    vertical-align: bottom;
+    height: 100px;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: rgb(49 187 236);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+p{
+  min-height: 1.5em;
+}
+
+.btn .btn-light, .btn .btn-outline-danger{
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/*---------------Vista dispositivos Grandes--------*/
+
+@media screen and (min-width: 679px) {
+  .row {
+    gap: 0px;
+  }
+}
+

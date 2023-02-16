@@ -1,0 +1,100 @@
+<div class="modulo-skill">
+  <p></p>
+  <circle-progress
+    [innerStrokeColor]="'#e7e8ea'"
+    [outerStrokeWidth]="18"
+    [innerStrokeWidth]="6"
+    [animationDuration]="2200"
+    [showTitle]="true"
+    [responsive]="false"
+    [subtitleFontSize]="'20'"
+    [showImage]="true"
+    [imageSrc]="datos.imagen"
+    [imageHeight]="70"
+    [imageWidth]="75"
+    [percent]="datos.porcentaje"
+    [outerStrokeColor]="datos.color"
+  ></circle-progress>
+  <h4 class="text-center">{{ datos.porcentaje }} %</h4>
+  <p></p>
+  <div class="col-sm-3 edit-skill">
+    <div class="d-flex p-2 flex-wrap">
+      <div
+        class="social-icons p-2"
+        *ngIf="editService.valorIcon"
+        (click)="onEdit()"
+      >
+        <button class="btn btn-light" d-flex ml-auto href="#habil">
+          <i class="bi bi-pencil-fill">EDITAR</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="fixed-top modal-skill"
+  *ngIf="editFlag"
+  enctype="multipart/form-data"
+>
+  <div
+    class="position-relative col-sm-6 fade-in top-50 start-50 translate-middle border border-1 border-primary bg-white redondea"
+  >
+    <div class="modal-header">
+      <h3>Modificar los datos de Habilidades</h3>
+    </div>
+    <div class="modal-body d-flex flex-column">
+      <div>
+        <label for="porcentaje">Elija el porcentaje
+        <input
+          class="form-control"
+          type="number"
+          id="porcentaje"
+          name="porcentaje"
+          [(ngModel)]="editando.porcentaje"
+        />
+
+        <input
+          class="range-bar"
+          type="range"
+          id="rango"
+          min="0"
+          max="100"
+          [(ngModel)]="editando.porcentaje"
+        />
+      </label>
+      </div>
+      <label for="dirección">Escriba la dirección de la imagen</label>
+      <input
+        class="form-control"
+        type="text"
+        placeholder="http:/img/imagen.png"
+        [(ngModel)]="editando.imagen"
+      />
+      <label for="color">Elija el color
+      <input
+        class="form-control"
+        type="color"
+        name="color"
+        id="color"
+        [(ngModel)]="editando.color"
+      />
+    </label>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="onEdit()">
+        Cerrar
+      </button>
+      <button type="button" class="btn btn-danger" (click)="onDelete(datos)">
+        Borrar
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="onSaveEdit(editando)"
+      >
+        Aceptar
+      </button>
+    </div>
+  </div>
+</div>

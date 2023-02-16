@@ -1,0 +1,12 @@
+<div class="container">
+
+    <div class="icon-estudio   d-flex p-2 flex-wrap">
+        <div class="edit-icon-about social-icons p-2" *ngIf="editService.valorIcon" >
+            <a class="social-icon" href="#" (click)="onEdit()" aria-label="Edit"><i class="fas fa-pen"></i></a>
+        </div>
+        <div class="edit-icon-about social-icons p-2" *ngIf="editService.valorIcon">
+            <a class="social-icon" href="#"(click)="onDelete('uno')" aria-label="Delete"><i class="far fa-trash-alt"></i></a>
+        </div>
+    </div>
+</div>
+

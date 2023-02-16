@@ -1,0 +1,57 @@
+.gradient-custom {
+  /* fallback for old browsers */
+  background: rgb(49, 187, 236);
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(49, 187, 236),
+    rgb(132, 172, 236)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgb(49, 187, 236), rgb(132, 172, 236));
+}
+
+.container {
+  background: linear-gradient(to right, rgb(49, 187, 236), rgb(132, 172, 236));
+}
+
+body {
+  background-color: linear-gradient(
+    to right,
+    rgb(49, 187, 236),
+    rgb(132, 172, 236)
+  );
+}
+
+.card {
+  border-radius: 1rem;
+  font-family: finlandica;
+  font-size: 1.1em;
+  min-height: 630px;
+}
+
+.error-msg {
+  padding-bottom: 5px;
+  width: 250px;
+  display: inline;
+  color: red;
+}
+
+#headingOne {
+  color: orange;
+}
+
+/*--------------Vista dispositivos Grandes----------*/
+
+@media (min-width: 576px) {
+  .container-xxl,
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1900px;
+  }
+}

@@ -1,0 +1,51 @@
+.modulo-skill {
+    display: flex;
+    flex-direction: column;
+    font-family: finlandica;
+    font-size: 1.4em;
+    gap: 5px;
+}
+.edit-skill{
+    display: inline-block ;
+    margin-left: 2rem;
+    margin-top:  -2rem ;
+}
+.modal-skill{
+    padding-top: 2em;
+    display:block;
+    width: 100%;
+    height: 100vh;
+    background: rgb(49, 187, 236);
+    font-family: finlandica;
+    font-size: 1.4em;
+}
+.redondea{
+    border-radius: 1.5rem;
+    color:rgb(0, 0, 0);
+}
+.modal .d-flex {
+    display: inline;
+    width: 300px;
+}
+
+.modal-header {
+    margin-left: 20px;
+  }
+  
+  .modal-body {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .modal-footer{
+      margin-right: 20px;
+  }
+  
+  
+  .modal-header .btn-close{
+      margin-right:20px;
+  }
+  .btn{
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }

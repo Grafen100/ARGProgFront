@@ -1,0 +1,137 @@
+<div class="container">
+  <div class="row">
+    <div class="header-form">
+      <h2>Educación</h2>
+    </div>
+    <div>
+      <div *ngIf="formEduc.invalid && !submitted" [ngClass]="'error'">
+        <b><u> Formulario NO VALIDO</u></b>
+      </div>
+      <br />
+      <form
+        [formGroup]="formEduc"
+        (ngSubmit)="onCreate()"
+        id="form-educ"
+        novalidate
+        #f="ngForm"
+        class="was-validated"
+      >
+        <div class="form-box">
+          <div class="form-group1">
+            <label for="nombreEduc">
+              <b>Nombre de la Institución</b>
+            </label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombreEduc"
+                formControlName="nombreEduc"
+                name="nombreEduc"
+                minlength="3"
+                maxlength="255"
+                placeholder="Nombre de la Institución o Colegio..."
+                [(ngModel)]="nombreEduc"
+                required
+              />
+              <span class="validity"></span>
+
+            <div *ngIf="formEduc.get('nombreEduc').invalid" [ngClass] = "'error'">
+              <div *ngIf="'nombreEduc.errors.required'" class="error-msg">
+                El campo es requerido, 3 caracteres como mínimo.
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="fechas">
+            <div class="inicio">
+              <label for="fechaInicio">
+                <b> Fecha de Inicio </b>
+                <input
+                  type="date"
+                  [min]="pastStr"
+                  [max]="todayStr"
+                  name="fechaInicio"
+                  formControlName="fechaInicio"
+                  class="form-control"
+                  [(ngModel)]="fechaInicio"
+                  required
+                  (ngModelChange)="dateChanged()"
+                />
+                <span class="validity"></span>
+              </label>
+
+              &nbsp;
+              <div class="inicio-msg">
+                <div *ngIf="formEduc.get('fechaInicio').invalid" [ngClass] = "'error'">
+                  <div *ngIf="'fechaInicio.errors.required'" class="error-msg">
+                    El campo es requerido, una fecha
+                    <br>
+                     del ultimo año.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="final">
+              <label for="fechaFinal">
+                <b> Fecha Final </b>
+                <input
+                  type="date"
+                  [min]="disableDateStr"
+                  [max]="todayStr"
+                  name="fechaFinal"
+                  formControlName="fechaFinal"
+                  class="form-control"
+                  [(ngModel)]="fechaFinal"
+                  required
+                />
+                <span class="validity"></span>
+              </label>
+
+              &nbsp;
+              <div class="final-msg">
+                <div *ngIf="formEduc.get('fechaInicio').invalid" [ngClass] = "'error'">
+                  <div *ngIf="'fechaInicio.errors.required'" class="error-msg">
+                    El campo es requerido, una fecha
+                    <br>
+                    hasta el dia de HOY (inclusive).
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="form-group2">
+            <label for="descEduc">
+              <b> Especialización del título obtenido</b>
+            </label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="descEduc"
+              formControlName="descEduc"
+              name="descEduc"
+              minlength="10"
+              maxlength="255"
+              placeholder="Especializacion del titulo obtenido..."
+              [(ngModel)]="descEduc"
+              required
+            ></textarea>
+            <div *ngIf="formEduc.get('descEduc').invalid" [ngClass] = "'error'">
+              <div *ngIf="'descEduc.errors.required'" class="error-msg">
+                El campo es requerido es de 10 caracteres como mínimo.
+              </div>
+            </div>
+          </div>
+          <br />
+          <button class="btn btn-primary" [disabled]="f.invalid" type="submit">
+            Agregar educación
+          </button>
+          <br /><br />
+        </div>
+      </form>
+      <div *ngIf="submitted" [ngClass]="'success'">
+        <b>Formulario enviadose...</b>
+      </div>
+    </div>
+  </div>
+</div>

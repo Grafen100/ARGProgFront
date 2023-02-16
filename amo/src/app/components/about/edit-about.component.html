@@ -1,0 +1,140 @@
+<div class="container" *ngIf="person">
+    <div class="row">
+      <div class="header-form">
+        <span>
+          <h2>Perfil de Usuario</h2>
+        </span>
+      </div>
+      <div>
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="nombre"
+              ><b>Nombre</b>
+            </label>
+              <br />
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                #nombre="ngModel"
+                minlength="3"
+                maxlength="255"
+                [(ngModel)]="person.nombre"
+                required="required"
+              />
+              <span class="validity"></span>
+            <div *ngIf="!nombre.valid && nombre.touched">
+              <div *ngIf="['person.errors.minlength']" class="error-msg">
+                El mínimo de caracteres es de 3
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="nombre">
+              <b>Apellido</b>
+              <br />
+            </label>
+              <input
+                type="text"
+                class="form-control"
+                id="apellido"
+                name="apellido"
+                #apellido="ngModel"
+                minlength="3"
+                maxlength="255"
+                [(ngModel)]="person.apellido"
+                required="required"
+              />
+              <span class="validity"></span>
+            <div *ngIf="!apellido.valid && apellido.touched">
+              <div *ngIf="['person.errors.minlength']" class="error-msg">
+                El mínimo de caracteres es de 3
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="descPers">
+              <b>Descripcion</b>
+            </label>
+              <textarea
+                type="text"
+                class="form-control"
+                id="descPers"
+                name="descPers"
+                #desc="ngModel"
+                minlength="3"
+                maxlength="255"
+                [(ngModel)]="person.descPers"
+                required="required"
+              ></textarea>
+              <span class="validity"></span>
+            <div *ngIf="!desc.valid && desc.touched">
+              <div *ngIf="['person.errors.minlength']" class="error-msg">
+                El mínimo de caracteres es de 3
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="imagen">
+              <b>Imagen</b>
+            </label>
+              <input
+                type="file"
+                class="form-control"
+                id="imagen"
+                name="imagen"
+                #imagen="ngModel"
+                minlength="3"
+                maxlength="255"
+                alt="imagenpersonal"
+                [(ngModel)]="person.imagen"
+                (change)="uploadFile($event)"
+                accept=".tga, .tiff, .gif, .bmp, .ico, .png, .jpg, .jpeg, .webp"
+                required="required"
+              />
+              <span class="validity"></span>
+            <div
+              class="boton-edt col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+            >
+                  <div *ngIf="!imagen.valid && imagen.touched">
+                  <div *ngIf="['person.errors.minlength']" class="error-msg">
+                      Se acepta archivo de formatos .tga, .tiff, .gif, .bmp, .ico,
+                      .png, .jpg, .jpeg, .webp
+                  </div>
+                  </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <br />
+            <label for="nombre">
+              <b>Telefono</b>
+            </label>
+              <br />
+              <input
+                type="text"
+                class="form-control"
+                id="telefono"
+                name="telefono"
+                #telephone="ngModel"
+                minlength="3"
+                maxlength="15"
+                [(ngModel)]="person.telefono"
+                required="required"
+              />
+              <span class="validity"></span>
+            <div *ngIf="!telephone.valid && telephone.touched">
+              <div *ngIf="['person.errors.minlength']" class="error-msg">
+                El cantidad requerida de caracteres es entre 3 y 15.
+              </div>
+            </div>
+          </div>
+          <br />
+          <button class="btn btn-primary" [disabled]="f.invalid" type="submit">
+            Actualizar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

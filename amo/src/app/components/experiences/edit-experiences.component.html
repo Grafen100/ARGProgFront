@@ -1,0 +1,124 @@
+<div class="container" *ngIf="expjob">
+  <div class="row">
+    <div class="header-form">
+      <h2>Experiencia</h2>
+    </div>
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group1">
+          <br />
+          <label for="nombreExp"> <b> Nombre de la Empresa</b> </label>
+          <br />
+          <input
+            type="text"
+            id="nombreExp"
+            name="nombreExp"
+            #nombre="ngModel"
+            class="form-control"
+            minlength="3"
+            maxlength="30"
+            [(ngModel)]="expjob.nombreExp"
+            required="required"
+          />
+          <div *ngIf="!nombre.valid && nombre.touched">
+            <div *ngIf="['nombreExp.errors.minlength']" class="error-msg">
+              El mínimo de caracteres es de 3.
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="fechas">
+          <div class="inicio">
+            <label for="fechaInicio">
+              <b> Fecha de Inicio </b>
+              <input
+                type="date"
+                min="2021-01-01"
+                max="2022-09-30"
+                name="fechaInicio"
+                #inicio="ngModel"
+                class="form-control"
+                placeholder="fecha de inicio..."
+                [(ngModel)]="expjob.fechaInicio"
+                required
+              />
+              <span class="validity"></span>
+            </label>
+            &nbsp;
+            <div class="inicio-msg">
+              <div *ngIf="!inicio.valid && inicio.touched">
+                <div
+                  *ngIf="['fechaInicio.errors.min']"
+                  class="error-msg"
+                  text-inline
+                >
+                  La fecha debe ser posterior al 2021.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="final">
+            <label for="fechaFinal">
+              <b> Fecha Final </b>
+              <input
+                type="date"
+                min="2021-01-01"
+                max="2022-09-30"
+                name="fechaFinal"
+                #final="ngModel"
+                class="form-control"
+                placeholder="fecha final..."
+                [(ngModel)]="expjob.fechaFinal"
+                required
+              />
+              <span class="validity"></span>
+            </label>
+            &nbsp;
+            <div class="final-msg">
+              <div *ngIf="!final.valid && final.touched">
+                <div
+                  *ngIf="['fechaFinal.errors.min']"
+                  class="error-msg"
+                  text-inline
+                >
+                  La fecha debe ser posterior al 2021.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="form-group2">
+          <label for="descExp">
+            <b>Descripción de las tareas realizadas</b>
+          </label>
+          <textarea
+            type="text"
+            id="descExp"
+            name="descExp"
+            #desc="ngModel"
+            class="boxText"
+            minlength="10"
+            maxlength="255"
+            [(ngModel)]="expjob.descExp"
+            required="required"
+          ></textarea>
+          <div *ngIf="!desc.valid && desc.touched">
+            <div *ngIf="['descExp.errors.minlength']" class="error-msg">
+              El mínimo de caracteres es de 10
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <button class="btn btn-primary" [disabled]="f.invalid" type="submit">
+          Actualizar
+        </button>
+        <br /><br />
+      </form>
+    </div>
+  </div>
+</div>
