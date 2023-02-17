@@ -11,6 +11,6 @@ export const environment = {
   },
 
   production: true,
-  URL: 'https://argprogAmo.up.railway.app/' 
+  URL: 'https://argprogAm0.up.railway.app/' 
 
 };
