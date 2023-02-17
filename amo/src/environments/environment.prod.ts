@@ -11,6 +11,6 @@ export const environment = {
   },
 
   production: true,
-  URL: 'https://projectam0-backend.herokuapp.com/' 
+  URL: 'https://argprogAmo.up.railway.app/' 
 
 };
