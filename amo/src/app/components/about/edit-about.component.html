@@ -20,6 +20,7 @@
                 #nombre="ngModel"
                 minlength="3"
                 maxlength="255"
+                placeholder="nombre..."
                 [(ngModel)]="person.nombre"
                 required="required"
               />
@@ -43,6 +44,7 @@
                 #apellido="ngModel"
                 minlength="3"
                 maxlength="255"
+                placeholder="apellido..."
                 [(ngModel)]="person.apellido"
                 required="required"
               />
@@ -65,6 +67,7 @@
                 #desc="ngModel"
                 minlength="3"
                 maxlength="255"
+                placeholder="descripción..."
                 [(ngModel)]="person.descPers"
                 required="required"
               ></textarea>
@@ -119,6 +122,7 @@
                 #telephone="ngModel"
                 minlength="3"
                 maxlength="15"
+                placeholder="+54 9 xx xxxx xxxx"
                 [(ngModel)]="person.telefono"
                 required="required"
               />
