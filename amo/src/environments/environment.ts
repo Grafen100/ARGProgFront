@@ -16,7 +16,7 @@ export const environment = {
  
   production: false,
   /*DEVELOPMENT --> */  URL: 'http://localhost:8080/',
-  /*PRODUCTION --> */ //URL: 'https://argprogAm0.up.railway.app/'
+  /*PRODUCTION --> */ //URL: 'https://argprogam0.netlify.app/'
 
 }
 
