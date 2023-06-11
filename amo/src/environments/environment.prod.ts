@@ -11,6 +11,6 @@ export const environment = {
   },
 
   production: true,
-  URL: 'https://argprogAm0.up.railway.app/' 
+  URL: 'https://argprogam0.netlify.app/' 
 
 };
