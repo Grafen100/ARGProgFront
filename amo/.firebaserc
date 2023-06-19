@@ -1,8 +1,0 @@
-{
-  "projects": {
-    "default": "projectam0-app",
-    "projectam0-app": "projectam0-app"
-  },
-  "targets": {},
-  "etags": {}
-}
