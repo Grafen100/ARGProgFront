@@ -46,7 +46,7 @@ ALGUNOS DETALLES...
            
 
 
-  SISTEMA FRONTEND DESPLEGADO EN FIREBASE.
+  SISTEMA FRONTEND DESPLEGADO EN NETLIFY.
   ESTE PROYECTO SE ENCUENTRA EN ETAPA DE FINALIZACIÓN.
 --------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------
