@@ -4,14 +4,10 @@
 
 export const environment = {
  
-  netlify: {
-    projectId: 'projectam0.netlify.app',
-    sited: '9d4b79a5-c692-424b-a79c-f72571bbe92f',
-
-  },
+  
   production: false,
-  /*DEVELOPMENT --> */  URL: 'http://localhost:8080/',
-  /*PRODUCTION --> */ //URL: 'https://backam0.onrender.com/'
+  /*DEVELOPMENT --> */ // URL: 'http://localhost:8080/',
+  /*PRODUCTION --> */ URL: 'https://backam0.onrender.com/'
 
 }
 
