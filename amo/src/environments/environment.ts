@@ -6,8 +6,8 @@ export const environment = {
  
   
   production: false,
-  /*DEVELOPMENT --> */ // URL: 'http://localhost:8080/',
-  /*PRODUCTION --> */ URL: 'https://backam0.onrender.com/'
+  /*DEVELOPMENT --> */  URL: 'http://localhost:8080/',
+  /*PRODUCTION --> */ // URL: 'https://backam0.onrender.com/'
 
 }
 
