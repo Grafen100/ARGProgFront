@@ -15,7 +15,7 @@
           "options": {
             "allowedCommonJsDependencies": [
               "lodash",
-              "Typed.js"
+              "typed.js"
            ],
             "outputPath": "dist/front-end",
             "index": "src/index.html",
