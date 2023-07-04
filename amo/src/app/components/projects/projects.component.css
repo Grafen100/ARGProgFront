@@ -44,12 +44,13 @@
 .img-proyecto{
     box-shadow: 10px 10px 30px #000000;
     box-shadow: ejeX ejeY difumasion color;
+    margin:auto;
 }
 .logosProyectos{
     width: 16em;
     height: 12em;
     object-fit: contain;
-    object-position: 0px 20px;
+  /*object-position: 0px 20px;*/
   }
 
   .social-icons {
